@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login page Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	#LoginSec
+  	{
+  		background-image: url('img/3ddd.jpg');
+  		background-position: center;
+  		background-size: cover;
+  		width: 100%;
+  		height: 90vh;
+  	}
+  	.loginBox
+  	{
+  		padding: 20px;
+  		color:blue;
+  		margin-top: 27%;
+  		border-radius: 7px;
+  		background-color: rgba(255, 255, 255,0.8);
+  	}
+  	.loginBox form input[type="email"] ,input[type="password"]
+  	{
+  		border:none;
+  		outline: none;
+  		border-bottom: 2px solid blue;
+  		background:transparent;
+  	}
+  	.loginBox form input[type="email"] ,input[type="password"]:focus
+  	{
+  		background:transparent;
+  	}
+  	.loginBox >img
+  	{
+  		width:140px;
+  		height:140px;
+  		position: relative;
+  		top:-90px;
+  		left:37%;
+  	}
+  	@media (max-width:700px)
+  	{
+  		.loginBox >img
+  	{
+  		width:100px;
+  		height:100px;
+  		
+
+  	}
+  	}
+  </style>
+</head>
+<body>
+	<section id="LoginSec">
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4"></div>
+	<div class="col-lg-4 col-md-4 col-sm-4">
+		<div class=" loginBox">
+			<img src="img/loginImg.png">
+  		<h2 class="text-center text-uppercase">Login form</h2>
+		  <form action="">
+		    <div class="form-group">
+		      <label for="email">Email:</label>
+		      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">Password:</label>
+		      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+		    </div>
+		   
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		  </form>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-4"></div>
+</div>
+
+</section>
+</body>
+</html>
