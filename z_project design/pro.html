@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="swiper-js/swiper-bundle.css">
+  <link rel="stylesheet" href="swiper-js/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+        <link rel="stylesheet" href="pro.css">
+    </head>
+    <body>
+        <!--
+            *Name :Deepak Jadhava (ArjunDeep)
+            *Navigation section is stared form here
+        -->
+        <section class="navigation" id="nav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.jpeg" alt=""> ArjunDeep
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#client">Client</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#gallary">gallary</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#contact">Contact</a>
+                        <a class="dropdown-item" href="#about">About</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+        </section>
+        
+        <!--Navigation section is ended here-->
+        <!--slider section started form here-->
+    <section class="sliderBox" id="home">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/article_laptop.jpg" alt="Los Angeles" >
+            <div class="carousel-caption" id="one">
+                <div class="sliderSingle">
+                    <div class="sliderText">
+                        <h2>I'm Python Developer .</h2>
+                        <h3>Back-end Developer.</h3>
+                        <p class="text-justfied">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti distinctio fugit consectetur harum repellat et dicta accusamus nam saepe maiores quis odit dolore corporis illum, aperiam expedita blanditiis quia.</p>
+                        <p class="text-right">-ArjunDeep</p>
+                        <a href="" class="btn btn-primary">Click Now</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="carousel-item ">
+            <img src="img/buldnigh.jpg" alt="Los Angeles" >
+            <div class="carousel-caption" id="two">
+                <div class="sliderSingle">
+                    <div class="sliderText">
+                        <h2>I'm UI Developer .</h2>
+                        <h3>Web Designer</h3>
+                        <p class="text-justfied">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti distinctio fugit consectetur harum repellat et dicta accusamus nam saepe maiores quis odit dolore corporis illum, aperiam expedita blanditiis quia.</p>
+                        <p class="text-right">-ArjunDeep</p>
+                        <a href="" class="btn btn-primary">Click Now</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="carousel-item " >
+            <img src="img/article_mobile.jpg" alt="Los Angeles" >
+            <div class="carousel-caption" id="three">
+                <div class="sliderSingle">
+                    <div class="sliderText">
+                        <h2>I'm Java Developer.</h2>
+                        <h3>Beck-end & Web Designer</h3>
+                        <p class="text-justfied">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti distinctio fugit consectetur harum repellat et dicta accusamus nam saepe maiores quis odit dolore corporis illum, aperiam expedita blanditiis quia.</p>
+                        <p class="text-right">-ArjunDeep</p>
+                        <a href="" class="btn btn-primary">Click Now</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </a>
+    </div> 
+        </section>
+         <!--Slider area is end here --> 
+         <!--About section is started form here --> 
+        <section class="About" id="about">
+            <div class="AboutBox p-5">
+                <div class="AboutHead text-center">
+                    <h1 class="text-uppercase pt-5">About Us </h1>
+                    <p class="text-center pb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta fugiat, commodi blanditiis repellat quidem maiores veritatis voluptatibus ad error possimus!
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-sm-12">
+                        <div class="p-5 AboutRight">
+                            
+                            <h2 class="text-uppercase">Somthing About Us</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae totam consequuntur impedit quos. Molestiae, doloremque temporibus! Veritatis doloribus minus aut iusto. Veniam expedita rem beatae itaque omnis maiores iste? </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae totam consequuntur impedit quos. Molestiae, doloremque temporibus! Veritatis doloribus minus aut iusto. Veniam expedita rem beatae itaque omnis maiores iste? </p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nam itaque nostrum facere, nihil eum. Suscipit, unde impedit harum delectus, iusto laboriosam, aperiam quis rerum rem inventore mollitia commodi nobis?</p>
+                            <a href="" class="btn btn-blue">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-12 ">
+                       <img src="img/logo.jpeg" alt=""class="img-thumbnail">
+                       <h4 class="p-3" style="font-family: Cooper Black;">Name : ArjunDeep Jadhav</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!--About section is end here -->
+        <!--Our Team section is started form here -->
+       <section class="team" id="team">
+           <div id="team">
+           <div class="teamBox  container">
+                <div class="text-center headline">
+                    <h1 class=" text-uppercase pt-5">Our Team Members </h1>
+                <p class="text-center pb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta fugiat, commodi blanditiis repellat quidem maiores veritatis voluptatibus ad error possimus!
+                </p>
+                </div>
+               <div class="teamArea row">
+                    <div class=" col-md-6 col-lg-4 col-sm-12">
+                        <div class="teamSimgle">
+                        <div class="teamImg">
+                            <img src="img/article_laptop.jpg" alt="">
+                        </div>
+                        <div class="teamText text-center p-2">
+                            <h3 class=" text-uppercase p-3">Name : ArjunDeep</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis sapiente ratione quibusdam repudiandae soluta, ad dolores totam accusantium illum.
+                            </p>
+                            <p class="teamIcon ">
+                                <i class="fa fa-cloud"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-car"></i>
+                                <i class="fa fa-file"></i>
+                                <i class="fa fa-bars"></i>
+                            </p>
+                            <a href="" class="btn btn-success mb-2">Learn More</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-lg-4 col-sm-12">
+                        <div class="teamSimgle">
+                        <div class="teamImg">
+                            <img src="img/article_mobile.jpg" alt="">
+                        </div>
+                        <div class="teamText text-center p-2">
+                            <h3 class=" text-uppercase p-3">Name : ArjunDeep</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis sapiente ratione quibusdam repudiandae soluta, ad dolores totam accusantium illum.
+                            </p>
+                            <p class="teamIcon ">
+                                <i class="fa fa-cloud"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-car"></i>
+                                <i class="fa fa-file"></i>
+                                <i class="fa fa-bars"></i>
+                            </p>
+                            <a href="" class="btn btn-success mb-2">Learn More</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-lg-4 col-sm-12">
+                        <div class="teamSimgle">
+                        <div class="teamImg">
+                            <img src="img/a (3).jpg" alt="">
+                        </div>
+                        <div class="teamText text-center p-2">
+                            <h3 class=" text-uppercase p-3">Name : ArjunDeep</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis sapiente ratione quibusdam repudiandae soluta, ad dolores totam accusantium illum.
+                            </p>
+                            <p class="teamIcon ">
+                                <i class="fa fa-cloud"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-car"></i>
+                                <i class="fa fa-file"></i>
+                                <i class="fa fa-bars"></i>
+                            </p>
+                            <a href="" class="btn btn-success mb-2">Learn More</a>
+                        </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+       </section>
+       <!-- Our Section  area is end -->
+       <!-- carosuel  area is srarted -->
+       <section class="Caro" id="client">
+        <h1 class="head">Company client area </h1>
+<div class="swiper-container">
+ <div class="swiper-wrapper">
+   <div class="swiper-slide">
+     <div class="img-area">
+         <img src="img/a (1).jpg" alt="">
+     </div>
+     <div class="text-area">
+        
+         <h3> ArjunDeep <br><span>Web Developer</span></h3>
+     </div>
+ </div>
+ 
+ <div class="swiper-slide">
+     <div class="img-area">
+         <img src="img/a (2).jpg" alt="">
+     </div>
+     <div class="text-area">
+         <h3>Jaywant <br><span>Java Developer</span></h3>
+     </div>
+ </div>
+ <div class="swiper-slide">
+   <div class="img-area">
+       <img src="img/a (4).jpg" alt="">
+   </div>
+   <div class="text-area">
+       <h3>Rudhay <br><span>.Net Developer</span></h3>
+   </div>
+</div>
+<div class="swiper-slide">
+ <div class="img-area">
+     <img src="img/a (3).jpg" alt="">
+ </div>
+ <div class="text-area">
+     <h3>Dhanaraj <br><span>PHP Developer</span></h3>
+ </div>
+</div>
+<div class="swiper-slide">
+<div class="img-area">
+   <img src="img/a (5).jpg" alt="">
+</div>
+<div class="text-area">
+   <h3>Shamal <br><span>HR Manager</span></h3>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="img-area">
+   <img src="img/a (6).jpg" alt="">
+</div>
+<div class="text-area">
+   <h3>Amol patil <br><span>Web Developer</span></h3>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="img-area">
+   <img src="img/a (7).jpg" alt="">
+</div>
+<div class="text-area">
+   <h3>Deepak  <br><span>Python Developer</span></h3>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="img-area">
+   <img src="img/a (1).jpeg" alt="">
+</div>
+<div class="text-area">
+   <h3>ArjunDeep <br><span>Web Developer</span></h3>
+</div>
+</div>
+
+    
+ </div>
+ <!-- Add Pagination -->
+ <div class="swiper-pagination"></div>
+</div>
+</section>
+
+       <!-- carosuel  area is end -->
+        <!-- gallary  area is srarted -->
+        <section class="gallary " id="gallary">
+            <div class="gallaryBox">
+                <h1 class="text-center text-uppercase white pt-5">My GAllary</h1>
+                <p class="text-center white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae totam consequuntur impedit quos. Molestiae, doloremque temporibus! Veritatis doloribus minus aut iusto. Veniam expedita rem beatae itaque omnis maiores iste?</p>
+                <div class="row p-2">
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/a (1).jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>First Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/coff3.jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Second Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/a (3).jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Third Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/a (4).jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Four Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/article_mobile.jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Five Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/buldnigh.jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Six Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/gallery_mobile_4.jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Seven Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <div class="gallarySingle" id="GO">
+                            <img src="img/gallery_mobile_2.jpg" alt="">
+                            <div class="gallaryText">
+                            <h2>Eight Img</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, blanditiis.</p>
+                            <p class="teamIcon">
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                                <i class="fa fa-user"></i>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Footer section start-->
+        <section class="footer p-5" id="contact">
+            <div class="footerHead">
+                <h2 class="text-center">Footer Information </h2>
+                <p class="text-center pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quas, culpa tenetur, ratione totam amet exercitationem vel voluptatibus odit libero eius dolorum. Fugit, debitis.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h2 class="text-center">Google Location</h2>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120611.08928001588!2d77.24581449398588!3d19.14725098523237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd1d66bb9d31721%3A0x43892c180155daf1!2sNanded%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1602761486074!5m2!1sen!2sin" 
+                    class="rounded" width="100%" height="94%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                    <h2 class="text-center"> Contact Details </h2> 
+                   <div class="contactDetails p-5">
+                    <h3>Address : </h3>
+                    <p>At Pasadgain Post Nerali , TQ and Dist Nanded 431605 , Maharastra .</p>
+                    <h3>Gmail ID : </h3>
+                    <p>deepak.d8855@gmail.com .</p>
+                    <h3>Contact NO : </h3>
+                    <p>9175852202  .</p>
+                    <h3>WebSite : </h3>
+                    <p> 
+                    <a href="https://github.com/DEEPAKJADHAV1372143">https://github.com/DEEPAKJADHAV1372143</a>
+                    </p>
+                    <p class="teamIcon  pt-5">
+                        <i class="fa fa-cloud"></i>
+                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-car"></i>
+                        <i class="fa fa-file"></i>
+                        <i class="fa fa-bars"></i>
+                    </p>
+                    
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h2 class="text-center">Regestration Form</h2>
+
+                    <form class="text-info">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name">
+                            </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="exampleTextarea">Example textarea</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </fieldset>
+                      </form>
+                </div>
+            </div>
+        </section>
+        <!--Footer section end -->
+        <div class="foot p-1">
+            <p class="text-center">Developed and Mantained by ArjunDeep @copywrite All Right are reserved to ArjunDeep </p>
+        </div>
+
+
+        <a href="#nav"><img src="img/upArro.jpg" alt="" id="goUP"></i></a>
+        <script src="swiper-js/swiper-bundle.js"></script>
+        <script src="swiper-js/swiper-bundle.min.js"></script>
+        <script src="pro.js"></script>
+    </body>
+</html>
