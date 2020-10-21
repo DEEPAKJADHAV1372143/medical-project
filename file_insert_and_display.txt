@@ -1,0 +1,167 @@
+------code for html-------
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="">
+                <style>
+                .card{
+                    margin:10px;
+                    float:left;
+                    width:300px;
+                    height:450px;
+                    overflow:hidden;
+                    background-color:#f23af2;
+                }
+                .card:hover{
+                    transition:1s;
+                    background-color:#47f2f5;
+                }
+                .card img{
+                    width:100%;
+                    height:200px;
+                }
+                .card p{
+                  padding:10px;
+                }
+                </style>
+</head>
+<body>
+
+<section class="formSec">
+    <div class="row">
+        
+        <div class="col-md-4 col-lg-4 col-sm-12 p-5">
+        <h6 class="text-success" >
+        <?php if($this->uri->segment(2) =="Data_inserted"){
+            echo "Your Data Has been inserted successfully...!";
+        } ?></h6>
+        <?php echo $error;?>
+        <?php echo form_open_multipart('Welcome/sendData');?>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" placeholder="Enter Name" name="name">
+                <span class="text-danger"><?php echo form_error('name'); ?></span>
+            </div>
+            <div class="form-group">
+                <label for="file">Selcet Image:</label>
+                <input type="file" class="form-control"  name="file">
+                <span class="text-danger"><?php echo form_error('file'); ?></span>
+            </div>
+            <div class="form-group">
+                <label for="info">Information:</label>
+                <textarea class="form-control" rows="5" placeholder="Enter Name" name="info"></textarea>
+                <span class="text-danger"><?php echo form_error('info'); ?></span>
+            </div>
+            
+            <input type="submit" name="submit" value="submit">
+             </form>
+        </div>
+        <div  class="col-md-8 col-lg-8 col-sm-12">
+        <?php
+                    if($fullInfo->num_rows() > 0){
+                        foreach($fullInfo->result() as $row){
+                            ?>
+                
+                    <div class="card">
+                        <img src="<?php echo base_url();?>uploads/<?php echo $row->file_name; ?>" alt="">
+                        <h3 class="text-center"><?php echo $row->name;?></h3>
+                        <p><?php echo $row->info;?></p>     
+                    </div>
+               
+                <?php
+                        }
+                    } ?>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
+
+
+
+------code for controller-------
+
+
+	public function fullData()
+	{		$this->load->model('First_Model');
+		    $data['error']='';
+			$data['fullInfo']=$this->First_Model->fetchAllData();
+			$this->load->view('tryWithFile', $data);
+	}
+	public function sendData()
+	{
+		$config['upload_path']          = './uploads/';
+			$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		/*	$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768; */
+
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('file'))
+			{
+					$error = array('error' => $this->upload->display_errors());
+
+					$this->load->view('tryWithFile', $error);
+			}
+			else
+			{
+				$this->load->library("form_validation");
+				$this->form_validation->set_rules("name","Name","required");
+				$this->form_validation->set_rules("info","Information","required");
+				if($this->form_validation->run())
+				{
+					$data = array(
+						'file_name' => $this->upload->data('file_name'),
+						'name' => $this->input->post('name'),
+						'info' => $this->input->post('info')
+					);
+					$this->load->model('First_Model');
+					$this->First_Model->getAllData($data);
+					redirect('Welcome/Data_inserted');
+				}
+				else
+				{
+					$this->fullData();
+				}
+				
+
+					
+			}
+
+		
+	}
+	public function Data_inserted()
+	{
+			$this->fullData();
+	}
+
+
+
+
+------code for model------
+
+
+ public function getAllData($data)
+	{
+	$this->db->insert("full_tbl",$data);
+    }
+    public function fetchAllData()
+    {
+     $ret=$this->db->get("full_tbl");
+    return $ret;
+    }
