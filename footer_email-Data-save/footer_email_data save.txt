@@ -1,0 +1,211 @@
+------code for html---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Footer Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="<?php echo base_url();?>assete/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section class="footer-sec">
+    <div class="footer-box bgc-black">
+    <h1 class="text-center text-uppercase text-white pt-3">Contact us</h1>
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-5 text-white">
+                    <div class="pt-5 h-3">
+                        <h4>Address : </h4>
+                        <p> <i class="fa fa-home"></i> Near Sambhaji putala , Deccon , Pune , Maharastra</p>
+                    </div>
+                    <div class="p-1 h-3">
+                        <h4>Email ID : </h4>
+                        <p> <i class="fa fa-envelope-open"></i> arjunDeep@gmail.com , rudhay@gmail.com</p>
+                    </div>
+                    <div class="p-1 h-3">
+                        <h4>Contact No : </h4>
+                        <p> <i class="fa fa-phone"></i> 9898989898 , 8787878787</p>
+                    </div>
+                    <div class="p-1 h-3">
+                        <h4>Website : </h4>
+                        <p><i class="fa fa-globe"></i> https://github.com/DEEPAKJADHAV1372143</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h4 class="text-center text-uppercase text-cyan">Ask yor query</h4>
+                        <form action="<?php echo base_url();?>index.php/Welcome/footer_val" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control"  placeholder="Enter Name" name="name">
+                                <span class="text-danger"><?php echo form_error('name'); ?></span>
+                                </div>
+                                <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control"  placeholder="Enter email" name="email">
+                                <span class="text-danger"><?php echo form_error('email'); ?></span>
+                                </div>
+                                <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" placeholder="Enter password" name="password">
+                                <span class="text-danger"><?php echo form_error('password'); ?></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Comment:</label>
+                                    <textarea class="form-control" rows="5" name="comment" placeholder="Enter Comment"></textarea>
+                                    <span class="text-danger"><?php echo form_error('comment'); ?></span>
+                                </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1">
+                <h6 class="text-center text-white">Developed and Mantained by 
+                    <a href="https://github.com/DEEPAKJADHAV1372143"><b>ArjunDeep</b> </a>, All right are revesrved 2020 - 2021 .</h6>
+            </div>
+    </div>
+</section>
+
+<script>
+    <?php if($this->uri->segment(2) =="Data_Foot_in"){
+        ?>
+            alert("Your Data Has been added successfully...!");
+        <?php
+        } ?>
+</script>
+</body>
+</html>
+
+
+
+
+------code for css---
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h1 , h2 , h3 , h4 , h5 , h5
+{
+    font-weight: bold;
+}
+h1 , h4
+{
+    font-family: cooper;
+}
+.text-cyan
+{
+    color:cyan;
+}
+.text-white
+{
+    color:white;
+}
+.text-oreange
+{
+    color:orange;
+}
+.bgc-black
+{
+    background-color:black;
+}
+input ,textarea
+{
+    background-color: transparent !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+label 
+{
+    color: cyan;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fa
+{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    padding: 7px;
+    margin: 7px;
+}
+.h-3:hover .fa
+{
+    background-color: blue;
+    color: white;
+}
+.h-3:hover p
+{
+  color: blue;
+   
+}
+
+
+
+
+
+
+------code for controler---
+
+
+
+	public function footer_sec()
+	{
+			$this->load->view('footer');
+	}
+	public function footer_val()
+	{
+			$this->load->library("form_validation");
+			$this->form_validation->set_rules("name","Name","required|alpha|trim");
+			$this->form_validation->set_rules("email","Email","required");
+			$this->form_validation->set_rules("password","Password","required");
+			$this->form_validation->set_rules("comment","Comment","required|trim");
+			if($this->form_validation->run())
+				{
+					$data = array(
+						'name' => $this->input->post('name'),
+						'password' => $this->input->post('password'),
+						'email' => $this->input->post('email'),
+						'comment' => $this->input->post('comment')
+						
+					);
+					$this->load->model('First_Model');
+					$this->First_Model->Footer_data($data);
+					redirect('Welcome/Data_Foot_in');
+				}
+				else
+				{
+					$this->footer_sec();
+				}
+			
+	}
+	public function Data_Foot_in()
+	{
+		$this->footer_sec();
+	}
+
+
+
+
+------code for model---
+
+
+public function Footer_data($data)
+    {
+        $this->db->insert("footer_tbl",$data);
+    }
+
+
+
