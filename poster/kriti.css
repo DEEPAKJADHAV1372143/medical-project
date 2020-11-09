@@ -1,0 +1,95 @@
+body
+{
+	font-family: 
+}
+.poster
+{
+	width: 100%;
+	height: 100vh;
+	background-image: url("food2.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+.line
+{
+	color:white;
+	letter-spacing: 4px;
+}
+.logo
+{
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	font-weight: bolder;
+	font-size: 20px;
+	color: white;
+	padding: 20px;
+	padding: 7px;
+	position: absolute;
+	top:10px;
+	right: 10px;
+	border-radius: 50%;
+	background-color: red;
+	border:2px solid white;
+
+	
+}
+#leftimg
+{
+	width: 170px;
+	height: 100px;
+	position: absolute;
+	right: 0px;
+	top:80px;
+}
+.textbox
+{	height: 400px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	color: white;
+	background-color: #cc3300;
+	
+	transform: skew(0deg, 7deg) translatey(100px);
+
+}
+
+.format
+{
+	
+	transform: skew(0deg, -7deg) ;
+
+}
+.format > h3
+{
+	font-size: 40px;
+	font-weight: bolder;
+	font-family: Goudy Stout;
+}
+.textbox > p
+{
+	letter-spacing: 1px;
+}
+.box > h1
+{	width: 300px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-family: Comic Sans MS;
+	font-weight: bolder;
+	background-color: red;
+}
+.box>h1:before
+{
+	height:32px;
+	width:32px;
+	position: absolute;
+	content: '';
+	left:280px;
+	top:100px;
+	background-color: red;
+	transform: rotate(45deg);
+	z-index: -1;
+}
