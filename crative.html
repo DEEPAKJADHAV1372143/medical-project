@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+	<style type="text/css">
+
+		.mainDiv , .dd
+		{
+			width: 100vw;
+			height: 100vh;
+			background-image: url("img/Deep (4).jpeg");
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+
+		}
+		.mainDiv::before
+		{
+			content: "";
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			opacity: 0.9;
+			height: 100%;
+			background: rgb(177,180,199);
+			background: radial-gradient(circle, rgba(177,180,199,1) 20%, rgba(155,255,0,1) 52%);
+			clip-path: polygon(0% 0%, 25% 0, 52% 77%, 29% 100%, 0% 100%);
+		}
+		.dd::before
+		{
+			content: "";
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			
+			height: 100%;
+			background: rgb(177,180,199);
+			background: radial-gradient(circle, rgba(177,180,199,1) 20%, rgba(155,255,0,1) 52%);
+	clip-path: circle(56.3% at 0 48%);
+
+
+		}
+		.data ,.dd>p
+		{
+			width: 70%;
+			z-index: 2;
+		}
+		.data h1
+		{
+			color: blue;
+			font-size: 4rem;
+			font-weight: bolder;
+
+		}
+		.data p
+		{
+			color: white;
+			font-size: 1.3rem;
+			font-weight: bolder;
+		}
+		@media(max-width: 899px)
+		{
+			.data h1
+		{
+			font-size: 1.6rem;
+			
+
+		}
+		.data p
+		{
+			font-size: 0.9rem;
+			
+		}
+		}
+	</style>
+</head>
+<body>
+ <section class="mainDiv">
+ 	<div class="data">
+ 		<h1>ArjunDeep</h1>
+ 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 	</div>
+ </section>
+ <h1 class="m-4"></h1>
+ 		
+ 		<div class="p-5 dd">
+ 			<p class="text-justify" style="color: white;">
+ 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 			https://bennettfeely.com/clippy/</p>
+ 		</div>
+</body>
+</html>
